@@ -1,0 +1,29 @@
+{
+    "blogs": [
+        {
+            "title": "Learning React",
+            "body": "I was told the learming curve was steep.",
+            "author": "KC Samm",
+            "id": "1"
+        },
+        {
+            "title": "Props are Cool",
+            "body": "My first encounter with props.",
+            "author": "John James",
+            "id": "2"
+        },
+        {
+            "title": "Hot Module Replacement",
+            "body": "Hot module replacement",
+            "author": "Jack Warner",
+            "id": "3"
+        },
+        {
+            "title": "React Native Basics",
+            "body": "React Native's new awesome features",
+            "author": "KC Samm",
+            "id": "4"
+        }
+    ]
+}
+

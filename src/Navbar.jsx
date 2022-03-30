@@ -5,7 +5,8 @@ const Navbar = () =>
     return (
         <nav className="navbar">
             <img src={ logo } className="logo" alt="React Logo" />
-            <duv className="nav-item">
+            <h1>Blog Basic</h1>
+            <duv className="links">
                 <a href="/">Home</a>
                 <a href="/create">New</a>
             </duv>
