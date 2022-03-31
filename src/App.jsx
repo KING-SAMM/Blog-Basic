@@ -1,10 +1,11 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import logo from './logo.svg'
 
 
 import Home from './Home';
 import Navbar from './Navbar';
 import Create from './Create';
+import BlogDetails from './BlogDetails';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={ <Home /> } />
             <Route path="/create" element={ <Create /> } />
+            <Route path="/blogs/:id" element={ <BlogDetails /> } />
           </Routes>
         </div>
       </div>
