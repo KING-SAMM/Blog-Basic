@@ -1,19 +1,26 @@
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
-
+    // Initial state for form elements/data
     const [ title, setTitle] = useState('');
     const [ body, setBody] = useState('');
     const [ author, setAuthor] = useState('');
+
+    // State before post request is made
     const [ isPending, setIsPending ] = useState(false);
 
+    const navigate = useNavigate();
+
+    // Handle form submit
     const handleSubmit = (e) => 
     {
         e.preventDefault();
         
+        // Create blog object with data from form user inputs
         const blog = { title, body, author };
 
+        // State on submit, when post request is made
         setIsPending( true );
         
         fetch( "http://localhost:8000/blogs", {
@@ -23,7 +30,12 @@ const Create = () => {
         } )
         .then( () => {
             console.log('New Blog Added!');
+
+            // State after submit, after post request is made
             setIsPending( false );
+
+            // Redirect to home (blogs) page when done
+            navigate('/');
         });
     }
 
